@@ -10,10 +10,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     min-height: 100vh;
     padding: 20px;
-    overflow: hidden;
+    overflow-y: auto;
     position: relative;
 }
 
@@ -62,7 +62,7 @@ body {
     height: 100vh;
     background-color: #d90429;
     border-radius: 0;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     cursor: pointer;
@@ -253,7 +253,7 @@ body {
     color: #d90429;
 }
 
-/* Medium screens (tablets) */
+/* Tablet screens */
 @media (max-width: 768px) {
     .envelope:before {
         border-left: 40vw solid transparent;
@@ -278,7 +278,7 @@ body {
     }
 }
 
-/* Small screens (phones) */
+/* Phone screens */
 @media (max-width: 480px) {
     body {
         padding: 10px;
@@ -302,5 +302,11 @@ body {
 
     .signature {
         font-size: 20px;
+    }
+
+    .envelope:before {
+        border-left: 45vw solid transparent;
+        border-right: 45vw solid transparent;
+        border-top: 25vh solid #ef233c;
     }
 }
